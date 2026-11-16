@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Регламент и план адаптации — Asesor Fiscal</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f5f6fa;--card:#fff;--ink:#1c2233;--mut:#5d667d;--line:#e3e6ef;--acc:#3b4fd8;--acc2:#e8ebff;
+--ok:#12805c;--okb:#e2f6ee;--warn:#b26a00;--warnb:#fff3dc;--bad:#c2303a;--badb:#fde8ea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+--bg:#12141c;--card:#1b1f2c;--ink:#eceef6;--mut:#9aa3bb;--line:#2b3042;--acc:#8c9bff;--acc2:#252b52;
+--ok:#4fd3a0;--okb:#143528;--warn:#f0b24d;--warnb:#3a2c10;--bad:#ff7f88;--badb:#3d1a1e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12141c;--card:#1b1f2c;--ink:#eceef6;--mut:#9aa3bb;--line:#2b3042;--acc:#8c9bff;--acc2:#252b52;--ok:#4fd3a0;--okb:#143528;--warn:#f0b24d;--warnb:#3a2c10;--bad:#ff7f88;--badb:#3d1a1e}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px 56px}
+.hero{background:linear-gradient(135deg,#2a37a8,#5b3fd1 60%,#8a4fe0);color:#fff;border-radius:0 0 28px 28px;padding:34px 22px 28px;margin:0 -16px 20px}
+.hero small{letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-size:12px}
+.hero h1{font-size:clamp(26px,6vw,38px);line-height:1.15;margin:10px 0 8px}
+.hero p{margin:0;opacity:.92;max-width:60ch}
+.tag{display:inline-block;background:rgba(255,255,255,.18);border-radius:99px;padding:4px 12px;font-size:13px;margin:14px 6px 0 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:-6px 0 18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.stat b{display:block;font-size:26px;color:var(--acc);line-height:1.1}
+.stat span{font-size:13px;color:var(--mut)}
+nav{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--acc);background:var(--acc2);padding:7px 13px;border-radius:99px;font-size:14px}
+section{margin:30px 0}
+h2{font-size:22px;margin:0 0 6px;display:flex;gap:10px;align-items:center}
+h2 i{font-style:normal;background:var(--acc);color:#fff;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:15px;flex:none}
+.lead{color:var(--mut);margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card h3{margin:0 0 8px;font-size:17px}
+.card ul{margin:0;padding-left:18px}.card li{margin:4px 0}
+.lim{margin-top:10px;font-size:14px;background:var(--acc2);color:var(--acc);border-radius:10px;padding:8px 10px}
+.lvl{border-radius:18px;padding:16px 18px}
+.lvl h3{margin:0 0 8px;font-size:16px}.lvl ul{margin:0;padding-left:18px}.lvl li{margin:5px 0;color:var(--ink)}
+.l-ok{background:var(--okb)}.l-ok h3{color:var(--ok)}
+.l-wa{background:var(--warnb)}.l-wa h3{color:var(--warn)}
+.l-no{background:var(--acc2)}.l-no h3{color:var(--acc)}
+.day{display:flex;height:46px;border-radius:12px;overflow:hidden;font-weight:600;font-size:14px;color:#fff}
+.day div{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 8px}
+.rule{display:flex;gap:12px;align-items:flex-start;margin-top:12px}
+.rule b{flex:none;background:var(--acc2);color:var(--acc);border-radius:10px;padding:4px 10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:14px 18px;display:flex;gap:12px;align-items:center;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary .n{flex:none;background:var(--acc);color:#fff;border-radius:10px;padding:3px 10px;font-size:13px}
+summary small{display:block;font-weight:400;color:var(--mut)}
+summary::after{content:"+";margin-left:auto;font-size:22px;color:var(--acc)}
+details[open] summary::after{content:"–"}
+.body{padding:0 18px 16px}
+.goal{background:var(--acc2);border-radius:12px;padding:9px 12px;font-size:14px;margin-bottom:10px}
+.d{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
+.d b{color:var(--acc);font-size:14px}.d span{font-size:15px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+.chk:first-child{border-top:0}.chk::before{content:"✓";flex:none;width:22px;height:22px;border-radius:7px;background:var(--okb);color:var(--ok);display:grid;place-items:center;font-size:13px;font-weight:700;margin-top:2px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--acc2);color:var(--acc);font-size:13px}
+tr:last-child td{border-bottom:0}
+.note{font-size:13.5px;color:var(--mut);margin-top:8px}
+.warnbox{background:var(--warnb);color:var(--ink);border-left:4px solid var(--warn);border-radius:10px;padding:10px 14px;margin-top:12px;font-size:14.5px}
+.sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px}
+.sign div{border:1px dashed var(--mut);border-radius:14px;padding:14px;font-size:14px;color:var(--mut);line-height:2.1}
+.sign b{color:var(--ink);display:block;line-height:1.4}
+a{color:var(--acc);word-break:break-word}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:34px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <small>Внутренний документ · Адаптация сотрудника</small>
+  <h1>Регламент работы и план адаптации</h1>
+  <p>Должность: Asesor Fiscal. Чем занимается сотрудник, как устроено обучение и как мы вместе пройдём первый месяц.</p>
+  <span class="tag">Первый месяц</span><span class="tag">4 часа в день</span><span class="tag">Наставник: Элина</span>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>20</b><span>рабочих дней плана</span></div>
+  <div class="stat"><b>2 + 2 ч</b><span>Anfix + процессы</span></div>
+  <div class="stat"><b>4</b><span>недели, у каждой своя цель</span></div>
+  <div class="stat"><b>1:1</b><span>поддержка наставника</span></div>
+</div>
+
+<nav>
+  <a href="#duties">Обязанности</a><a href="#levels">Самостоятельность</a><a href="#schedule">График</a><a href="#plan">План по дням</a><a href="#results">Результаты</a><a href="#final">Итоговая встреча</a><a href="#models">Модели</a>
+</nav>
+
+<section>
+  <h2><i>★</i>Цель и приоритет</h2>
+  <p class="lead">За месяц сотрудник знакомится со всеми ключевыми процессами и постепенно включается в текущую работу. Работа идёт в три шага: <b>знакомится → делает вместе с наставником → делает сам.</b> Так как вы приходите с опытом асессора, мы двигаемся в комфортном для вас темпе.</p>
+  <div class="card"><b>Главный приоритет:</b> уверенное владение Anfix, правилами обработки первичных документов и стандартами работы с клиентами. Ежедневная практика в Anfix сохраняется весь месяц.</div>
+</section>
+
+<section id="duties">
+  <h2><i>1</i>Функциональные обязанности</h2>
+  <p class="lead">Пять направлений работы. У каждого есть несколько договорённостей, которые помогают работать чётко и спокойно.</p>
+  <div class="grid">
+    <div class="card"><h3>📄 Документы в Anfix</h3>
+      <ul><li>Загрузка и обработка входящих и исходящих фактур</li><li>Проверка реквизитов: контрагент, дата, номер, база, ставка и сумма НДС, итог</li><li>Исправление ошибок распознавания, категории и коды</li><li>Привязка к клиенту, периоду и типу операции</li><li>Передача сомнительных документов наставнику</li></ul>
+      <div class="lim">💡 Спорные документы сначала обсуждаем с наставником — так мы сохраняем единый порядок.</div></div>
+    <div class="card"><h3>💬 Клиенты и Telegram</h3>
+      <ul><li>Ежедневный просмотр закреплённых чатов</li><li>Готовит ответы на типовые вопросы вместе с Элиной</li><li>Типовые вопросы по оплатам и cuota de autónomos — по утверждённым инструкциям</li><li>Фиксирует и передаёт нерешённые вопросы</li></ul>
+      <div class="lim">💡 Клиентам отвечаем по проверенной информации, а всё неочевидное сначала уточняем.</div></div>
+    <div class="card"><h3>🗂 Административные задачи</h3>
+      <ul><li>Небольшие текущие поручения по клиентам и процессам</li><li>Certificado digital: проверка статуса, подготовка данных, типовые шаги</li><li>Типовые ответы на письма и уведомления AEAT</li><li>Конфиденциальность и информационная безопасность</li></ul>
+      <div class="lim">💡 Ответы в AEAT согласуем с ответственным специалистом перед отправкой.</div></div>
+    <div class="card"><h3>🧾 Налоговые модели</h3>
+      <ul><li>Сбор и сверка исходных данных, проверка документов</li><li>Подготовка черновиков и контроль полноты информации</li><li>Расчёт, проверка и отправка — вместе с Элиной или другим специалистом</li></ul>
+      <div class="lim">💡 Перед отправкой декларации проходят проверку второй парой глаз.</div></div>
+    <div class="card"><h3>✅ Trello и рабочий день</h3>
+      <ul><li>Утро: просмотр задач и согласование приоритетов</li><li>У каждой задачи — понятный результат и срок</li><li>Готово → «Выполнено»; не готово → статус + комментарий о причине</li><li>Блокер или нехватка данных — сообщить сразу</li></ul>
+      <div class="lim">💡 Если задача застопорилась, сообщаем сразу, не дожидаясь конца дня.</div></div>
+  </div>
+</section>
+
+<section id="levels">
+  <h2><i>2</i>Как растёт самостоятельность</h2>
+  <p class="lead">Самостоятельность расширяется по мере знакомства с нашими процессами и инструментами. Если что-то неочевидно, Элина и наставник всегда на связи.</p>
+  <div class="grid">
+    <div class="lvl l-ok"><h3>🟢 С первых дней</h3><ul><li>Обработка стандартных фактур в Anfix</li><li>Обновление статусов в Trello</li><li>Фиксация вопросов и ошибок</li><li>Просмотр чатов, поиск новых обращений</li></ul></div>
+    <div class="lvl l-wa"><h3>🟡 Вместе с наставником</h3><ul><li>Ответы клиентам в Telegram: сначала вместе, затем самостоятельно</li><li>Ответы на письма и уведомления AEAT: согласуем перед отправкой</li><li>Действия с certificado digital</li><li>Черновики налоговых моделей</li></ul></div>
+    <div class="lvl l-no"><h3>🔵 Подключаем позже</h3><ul><li>Самостоятельная отправка деклараций: после первого месяца</li><li>Нестандартные налоговые ситуации: разбираем вместе с Элиной</li><li>Налоговые рекомендации клиентам: после знакомства с нашими стандартами</li><li>Работа со спорными документами: по согласованию</li></ul></div>
+  </div>
+  <div class="rule"><b>Совет</b><span>Если что-то непонятно дольше 15 минут, смело пишите наставнику: так вы быстрее вникнете в наши процессы.</span></div>
+</section>
+
+<section id="schedule">
+  <h2><i>3</i>Распорядок дня: 4 часа</h2>
+  <p class="lead">Время можно перераспределять в отдельные дни, но приоритет остаётся за ежедневной практикой в Anfix.</p>
+  <div class="day"><div style="flex:1;background:#3b4fd8">Anfix · 2 часа</div><div style="flex:1;background:#7a4fe0">Процессы и задачи · 2 часа</div></div>
+  <div class="grid" style="margin-top:12px">
+    <div class="card"><b>Anfix — учебный блок</b><br><span style="color:var(--mut)">Интерфейс и логика программы, обработка фактур, проверка распознавания, категории и коды, разбор ошибок, упражнения.</span></div>
+    <div class="card"><b>Внутренние процессы</b><br><span style="color:var(--mut)">Продукты и пакеты, стандарты общения, клиентские чаты, налоговые процессы, Trello, административные задачи.</span></div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2><i>4</i>План на 4 недели</h2>
+  <p class="lead">Нажмите на неделю, чтобы увидеть дни. Конкретное наполнение каждого дня наставник фиксирует в Trello.</p>
+
+  <details open><summary><span class="n">Неделя 1</span><span>Знакомство и базовый Anfix<small>Дни 1–5</small></span></summary><div class="body">
+    <div class="goal">🎯 Цель: понимает структуру компании и умеет обработать простую фактуру.</div>
+    <div class="d"><b>День 1</b><span>Команда, структура, услуги, сегменты клиентов; доступы; Trello и правила постановки задач; обзор Anfix.</span></div>
+    <div class="d"><b>День 2</b><span>Пакеты обслуживания и что входит в каждый; путь клиента; карточка клиента в Anfix.</span></div>
+    <div class="d"><b>День 3</b><span>Стандарты общения с клиентами; первая практика на простых фактурах.</span></div>
+    <div class="d"><b>День 4</b><span>Типы доходных и расходных документов, реквизиты, базовые категории и коды; клиентские чаты вместе с наставником.</span></div>
+    <div class="d"><b>День 5</b><span>Повторение, упражнения в Anfix, разбор ошибок. <b>Контрольная точка:</b> короткая обратная связь.</span></div>
+  </div></details>
+
+  <details><summary><span class="n">Неделя 2</span><span>Практика Anfix и клиентские процессы<small>Дни 6–10</small></span></summary><div class="body">
+    <div class="goal">🎯 Цель: обрабатывает фактуры по инструкции и готовит черновики ответов клиентам.</div>
+    <div class="d"><b>День 6</b><span>Обработка по пошаговой инструкции; проверка распознанных данных, типовые ошибки.</span></div>
+    <div class="d"><b>День 7</b><span>Категории и коды; случаи, когда программа не определяет категорию сама.</span></div>
+    <div class="d"><b>День 8</b><span>Несколько клиентских файлов под контролем; выявление недостающих и сомнительных документов.</span></div>
+    <div class="d"><b>День 9</b><span>Типовые вопросы в Telegram с Элиной; ответы готовим вместе, отправляем после обсуждения.</span></div>
+    <div class="d"><b>День 10</b><span>Вопросы по cuota de autónomos, оплатам и админ-действиям. <b>Контрольная точка:</b> промежуточная оценка точности в Anfix.</span></div>
+  </div></details>
+
+  <details><summary><span class="n">Неделя 3</span><span>Текущие задачи и налоговые модели<small>Дни 11–15</small></span></summary><div class="body">
+    <div class="goal">🎯 Цель: самостоятельно обрабатывает стандартные фактуры и понимает логику квартального закрытия.</div>
+    <div class="d"><b>День 11</b><span>Самостоятельная обработка стандартных фактур с проверкой наставником; фиксация вопросов и ошибок.</span></div>
+    <div class="d"><b>День 12</b><span>Логика квартального закрытия: сбор документов, полнота, сверка, сроки.</span></div>
+    <div class="d"><b>День 13</b><span>Модели 111, 115, 130, 131, 303: назначение, нужные данные, где их искать.</span></div>
+    <div class="d"><b>День 14</b><span>Модель 349 и дополнительные модели; разбор примеров клиентов.</span></div>
+    <div class="d"><b>День 15</b><span>Черновые данные для одной-двух моделей под контролем. <b>Контрольная точка:</b> обратная связь по качеству и пониманию.</span></div>
+  </div></details>
+
+  <details><summary><span class="n">Неделя 4</span><span>Закрепление и оценка готовности<small>Дни 16–20</small></span></summary><div class="body">
+    <div class="goal">🎯 Цель: работает с меньшим количеством подсказок; готов к итоговой оценке.</div>
+    <div class="d"><b>День 16</b><span>Фактуры в Anfix с меньшим количеством подсказок; контроль категорий и кодов.</span></div>
+    <div class="d"><b>День 17</b><span>Telegram: ответы на типовые вопросы, отправка после обсуждения с наставником; фиксация сложных обращений.</span></div>
+    <div class="d"><b>День 18</b><span>Админ-поручения и типовые действия с сертификатами по инструкции; Trello от постановки до закрытия.</span></div>
+    <div class="d"><b>День 19</b><span>Комплексная задача: документы клиента → Anfix → вопросы → данные для налоговой модели.</span></div>
+    <div class="d"><b>День 20</b><span>Итоговая проверка навыков; сильные стороны и зоны роста; обратная связь сотрудника; предложения по функционалу.</span></div>
+  </div></details>
+</section>
+
+<section id="results">
+  <h2><i>5</i>Ожидаемые результаты</h2>
+  <p class="lead">К концу первого месяца сотрудник:</p>
+  <div class="card">
+    <div class="chk">Ориентируется в интерфейсе Anfix, знает порядок обработки документов</div>
+    <div class="chk">Обрабатывает стандартные фактуры, проверяет распознанные данные, присваивает категории и коды</div>
+    <div class="chk">Знает, в каких случаях стоит подключить наставника</div>
+    <div class="chk">Знает пакеты услуг, этапы обслуживания клиента и стандарты общения</div>
+    <div class="chk">Работает в Trello: принимает задачи, уточняет сроки, обновляет статусы, закрывает работу</div>
+    <div class="chk">Понимает назначение основных моделей и данные, нужные для их подготовки</div>
+    <div class="chk">Выполняет типовые админ-поручения и готовит ответы клиентам под контролем</div>
+  </div>
+  <h3 style="margin:18px 0 8px;font-size:17px">Как измерять (ориентиры — подстройте под себя)</h3>
+  <div class="scroll"><table>
+    <tr><th>Показатель</th><th>Конец нед. 2</th><th>Конец нед. 4</th></tr>
+    <tr><td>Фактуры без правок наставника</td><td>≥ 80%</td><td>≥ 90%</td></tr>
+    <tr><td>Задачи Trello закрыты в срок</td><td>≥ 80%</td><td>≥ 90%</td></tr>
+    <tr><td>Черновики ответов клиентам без существенных правок</td><td>≥ 60%</td><td>≥ 80%</td></tr>
+    <tr><td>Нестандартные случаи обсуждены с наставником до решения</td><td colspan="2">всегда</td></tr>
+  </table></div>
+  <p class="note">Мы смотрим не только на скорость, но и на точность, внимательность, качество коммуникации и соблюдение сроков.</p>
+</section>
+
+<section id="final">
+  <h2><i>6</i>Итоговая встреча</h2>
+  <p class="lead">Участники: сотрудник, руководитель, наставник. Повестка:</p>
+  <div class="card">
+    <div class="chk">Какие темы и процессы изучены</div>
+    <div class="chk">Уровень Anfix: скорость, точность, типичные ошибки</div>
+    <div class="chk">Понимание стандартов, пакетов и коммуникации с клиентами</div>
+    <div class="chk">Работа с Trello и соблюдение сроков</div>
+    <div class="chk">Уверенность в типовых задачах и привычка вовремя обращаться за помощью по сложным</div>
+    <div class="chk">Сильные стороны, интересы и зоны для дообучения</div>
+    <div class="chk">Функционал на следующий этап и план развития</div>
+  </div>
+  <div class="warnbox">Итог встречи — план следующего этапа и распределение функционала по вашим сильным сторонам. Если по каким-то направлениям понадобится больше времени, спокойно продлим обучение.</div>
+</section>
+
+<section id="models">
+  <h2><i>7</i>Справка по налоговым моделям</h2>
+  <p class="lead">Список не означает, что каждый клиент подаёт все модели каждый квартал.</p>
+  <div class="scroll"><table>
+    <tr><th>Modelo</th><th>Что это</th></tr>
+    <tr><td><b>111</b></td><td>Удержания с зарплаты, профессиональных услуг и иных выплат</td></tr>
+    <tr><td><b>115</b></td><td>Удержания с аренды городской недвижимости</td></tr>
+    <tr><td><b>130</b></td><td>Авансы IRPF при estimación directa (при наличии обязанности)</td></tr>
+    <tr><td><b>131</b></td><td>Авансы IRPF при estimación objetiva / módulos (если применимо)</td></tr>
+    <tr><td><b>303</b></td><td>Периодическая декларация по IVA</td></tr>
+    <tr><td><b>309</b></td><td>Непериодическая декларация по IVA в случаях, предусмотренных законом</td></tr>
+    <tr><td><b>349</b></td><td>Сводная декларация по внутрисоюзным операциям (если есть обязанность)</td></tr>
+    <tr><td><b>123, 124, 126, 128, 136, 210, 216…</b></td><td>Дополнительные модели по конкретным клиентам и операциям</td></tr>
+    <tr><td><b>202</b></td><td>Авансы по Impuesto sobre Sociedades: обычно апрель, октябрь, декабрь — не стандартный квартальный пакет</td></tr>
+    <tr><td><b>249</b></td><td>Не входит в стандартный перечень; необходимость уточнять по клиенту</td></tr>
+  </table></div>
+  <div class="warnbox">Периодичность зависит от статуса налогоплательщика, операций, объёма деятельности и режима. Modelo 111 и 349 у крупных компаний могут подаваться ежемесячно. Всегда сверяйтесь с актуальным календарём AEAT — этот документ не заменяет его.</div>
+  <p class="note">Источники AEAT:<br>
+  <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/calendario-contribuyente/calendario-contribuyente-2026.html">Calendario del contribuyente 2026</a><br>
+  <a href="https://sede.agenciatributaria.gob.es/Sede/todas-gestiones/impuestos-tasas/pagos-cuenta/modelo-111-reten_____moniales-imputaciones-renta-autoliquidacion_/instrucciones.html">Инструкции к modelo 111</a></p>
+</section>
+
+<section>
+  <h2><i>8</i>Подтверждение ознакомления</h2>
+  <p class="lead">Документ фиксирует план адаптации и порядок работы на первый месяц. Он не заменяет трудовой договор, должностную инструкцию, соглашение об условиях занятости и обязательные требования законодательства.</p>
+  <div class="sign">
+    <div><b>Руководитель / наставник</b>ФИО: ____________________<br>Подпись: __________________<br>Дата: ____________________</div>
+    <div><b>Сотрудник</b>ФИО: ____________________<br>Подпись: __________________<br>Дата: ____________________</div>
+  </div>
+</section>
+
+<footer>Регламент адаптации · Первый месяц</footer>
+</div>
+</body>
+</html>
